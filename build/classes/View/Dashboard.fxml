@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.DashboardController">
+   <left>
+      <VBox prefHeight="500.0" prefWidth="179.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="btnBeli" buttonType="RAISED" contentDisplay="TOP" onAction="#btnBeliAction" prefHeight="200.0" prefWidth="200.0" ripplerFill="BLACK" text="BELI TIKET">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Resources/icons8-new-ticket-40.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnGanti" buttonType="RAISED" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" onAction="#btnGantiAction" prefHeight="200.0" prefWidth="200.0" ripplerFill="BLACK" text="GANTI TIKET">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Resources/icons8-edit-journal-40.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnHapus" buttonType="RAISED" contentDisplay="TOP" layoutX="10.0" layoutY="116.0" onAction="#btnHapusAction" prefHeight="200.0" prefWidth="200.0" ripplerFill="BLACK" text="HAPUS TIKET">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Resources/icons8-delete-ticket-40.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnCetak" buttonType="RAISED" contentDisplay="TOP" layoutX="10.0" layoutY="222.0" onAction="#btnCetakAction" prefHeight="200.0" prefWidth="200.0" ripplerFill="BLACK" text="CETAK TIKET">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Resources/icons8-send-to-printer-40.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <TableView fx:id="tableTiket" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="colKtp" prefWidth="75.0" text="No. KTP" />
+            <TableColumn fx:id="colNama" prefWidth="75.0" text="Penumpang" />
+            <TableColumn fx:id="colJadwal" prefWidth="75.0" text="Jadwal Berangkat" />
+            <TableColumn fx:id="colAsal" prefWidth="75.0" text="Stasiun Asal" />
+            <TableColumn fx:id="colTujuan" prefWidth="75.0" text="Stasiun Tujuan" />
+            <TableColumn fx:id="colKelas" prefWidth="75.0" text="Kelas" />
+            <TableColumn fx:id="colKereta" prefWidth="75.0" text="Kereta" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </center>
+   <bottom>
+      <Pagination fx:id="lintingHalaman" prefHeight="54.0" prefWidth="700.0" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

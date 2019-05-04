@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="546.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.EditTiketController">
+   <center>
+      <GridPane prefHeight="463.0" prefWidth="546.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="32.0" minHeight="10.0" prefHeight="25.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="48.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Nama Pemesan" textFill="#43484d" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font name="Roboto Black" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="50.0" />
+               </GridPane.margin>
+            </Label>
+            <Label layoutX="94.0" layoutY="46.0" text="Stasiun Asal" textFill="#43484d" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font name="Roboto Black" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="50.0" />
+               </GridPane.margin>
+            </Label>
+            <Label layoutX="10.0" layoutY="84.0" text="Stasiun Tujuan" textFill="#43484d" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font name="Roboto Black" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="50.0" />
+               </GridPane.margin>
+            </Label>
+            <Label layoutX="10.0" layoutY="140.0" text="Tanggal Keberangkatan" textFill="#43484d" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font name="Roboto Black" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="50.0" />
+               </GridPane.margin>
+            </Label>
+            <Label layoutX="10.0" layoutY="196.0" text="Jadwal Keberangkatan" textFill="#43484d" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font name="Roboto Black" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="50.0" />
+               </GridPane.margin>
+            </Label>
+            <Label layoutX="10.0" layoutY="252.0" text="Jumlah Penumpang" textFill="#43484d" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font name="Roboto Black" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="50.0" />
+               </GridPane.margin>
+            </Label>
+            <Label layoutX="10.0" layoutY="308.0" text="Nama Penumpang" textFill="#43484d" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font name="Roboto Black" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="50.0" />
+               </GridPane.margin>
+            </Label>
+            <Label layoutX="10.0" layoutY="363.0" text="No. KTP" textFill="#43484d" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font name="Roboto Black" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="50.0" />
+               </GridPane.margin>
+            </Label>
+            <Label layoutX="131.0" layoutY="390.0" text="Kelas" textFill="#43484d" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font name="Roboto Black" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="50.0" />
+               </GridPane.margin>
+            </Label>
+            <Label layoutX="140.0" layoutY="367.0" text="Kode Kereta" textFill="#43484d" GridPane.halignment="LEFT" GridPane.rowIndex="9" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font name="Roboto Black" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="50.0" />
+               </GridPane.margin>
+            </Label>
+            <Label layoutX="116.0" layoutY="408.0" text="Nama Kereta" textFill="#43484d" GridPane.halignment="LEFT" GridPane.rowIndex="10" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font name="Roboto Black" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="50.0" />
+               </GridPane.margin>
+            </Label>
+            <JFXTextField fx:id="fieldPemesanUpdate" GridPane.columnIndex="1" GridPane.valignment="BOTTOM">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </JFXTextField>
+            <JFXComboBox fx:id="comboAsalUpdate" prefHeight="25.0" prefWidth="305.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </JFXComboBox>
+            <JFXComboBox fx:id="comboTujuanUpdate" layoutX="310.0" layoutY="69.0" prefHeight="25.0" prefWidth="305.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </JFXComboBox>
+            <JFXTimePicker fx:id="fieldJadwalUpdate" prefHeight="25.0" prefWidth="301.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </JFXTimePicker>
+            <DatePicker fx:id="fieldTanggalUpdate" prefHeight="25.0" prefWidth="221.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </DatePicker>
+            <Spinner fx:id="spinDewasaUpdate" prefHeight="25.0" prefWidth="55.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="90.0" />
+               </GridPane.margin>
+            </Spinner>
+            <Spinner fx:id="spinAnakUpdate" layoutX="360.0" layoutY="237.0" prefHeight="25.0" prefWidth="55.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets right="35.0" />
+               </GridPane.margin>
+            </Spinner>
+            <Label layoutX="115.0" layoutY="74.0" prefHeight="27.0" prefWidth="46.0" text="Dewasa" textFill="#43484d" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <font>
+                  <Font name="Roboto Black" size="13.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="42.0" />
+               </GridPane.margin>
+            </Label>
+            <Label layoutX="340.0" layoutY="235.0" prefHeight="27.0" prefWidth="46.0" text="Bayi" textFill="#43484d" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+               <font>
+                  <Font name="Roboto Black" size="13.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="75.0" />
+               </GridPane.margin>
+            </Label>
+            <JFXTextField fx:id="fieldPenumpangUpdate" layoutX="330.0" layoutY="35.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="fieldKtpUpdate" layoutX="310.0" layoutY="287.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </JFXTextField>
+            <JFXComboBox fx:id="comboKodeKeretaUpdate" layoutX="330.0" layoutY="69.0" prefHeight="25.0" prefWidth="305.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </JFXComboBox>
+            <RadioButton fx:id="radioEkseUpdate" alignment="CENTER_LEFT" blendMode="DARKEN" mnemonicParsing="false" selected="true" text="Eksekutif" GridPane.columnIndex="1" GridPane.rowIndex="8">
+               <toggleGroup>
+                  <ToggleGroup fx:id="toggleKelasTIket" />
+               </toggleGroup>
+               <GridPane.margin>
+                  <Insets left="40.0" />
+               </GridPane.margin>
+            </RadioButton>
+            <RadioButton fx:id="comboBisnisUpdate" alignment="CENTER_LEFT" blendMode="DARKEN" layoutX="310.0" layoutY="370.0" mnemonicParsing="false" text="Bisnis" toggleGroup="$toggleKelasTIket" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+            <RadioButton fx:id="comboEkonomiUpdate" alignment="CENTER_LEFT" blendMode="DARKEN" layoutX="426.0" layoutY="370.0" mnemonicParsing="false" text="Ekonomi" toggleGroup="$toggleKelasTIket" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets right="40.0" />
+               </GridPane.margin>
+            </RadioButton>
+            <JFXTextField fx:id="fieldNamaKeretaUpdate" GridPane.columnIndex="1" GridPane.rowIndex="10">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </JFXTextField>
+            <Label layoutX="114.0" layoutY="414.0" text="Harga Total" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Roboto Black" size="22.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets top="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label layoutX="103.0" layoutY="444.0" text="Rp." GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="11" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Roboto Black" size="22.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="40.0" top="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="labelTotalBayar" layoutX="310.0" layoutY="439.0" text="0,-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Roboto Black" size="22.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="50.0" top="10.0" />
+               </GridPane.margin>
+            </Label>
+         </children>
+      </GridPane>
+   </center>
+   <bottom>
+      <HBox prefHeight="57.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="btnBeliUpdate" buttonType="RAISED" onAction="#btnBeliUpdateAction" prefHeight="60.0" prefWidth="300.0" style="-fx-background-color: #afc6ea;" text="Update" textFill="#0044ff">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="39.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Resources/icons8-buy-40.png" />
+                     </image>
+                  </ImageView>
+               </graphic></JFXButton>
+            <JFXButton fx:id="btnBatalUpdate" buttonType="RAISED" layoutX="10.0" layoutY="10.0" onAction="#btnBatalUpdateAction" prefHeight="60.0" prefWidth="300.0" style="-fx-background-color: #afc6ea;" text="Batal" textFill="#0044ff">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="39.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Resources/icons8-cancel-40.png" />
+                     </image>
+                  </ImageView>
+               </graphic></JFXButton>
+         </children>
+      </HBox>
+   </bottom>
+   <top>
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="36.0" prefWidth="571.0" style="-fx-background-color: #afc6ea;" text="EDIT TIKET" textAlignment="CENTER" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+   </top>
+</BorderPane>
