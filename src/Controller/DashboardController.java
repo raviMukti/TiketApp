@@ -1,6 +1,7 @@
 
 package Controller;
 
+import DAO.TiketDAO;
 import Database.DBConfig;
 import Model.TiketModel;
 import Model.TiketViewModel;
@@ -12,6 +13,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -21,6 +23,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Pagination;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -93,6 +97,8 @@ public class DashboardController implements Initializable {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("/View/EditTiket.fxml"));
         Parent root = (Parent) loader.load();
+        EditTiketController controller = loader.getController();
+        
         Stage gantiTiketStage = new Stage();
         Scene gantiTiketScene = new Scene(root);
         gantiTiketStage.initModality(Modality.APPLICATION_MODAL);
@@ -103,7 +109,23 @@ public class DashboardController implements Initializable {
     }
 
     @FXML
-    private void btnHapusAction(ActionEvent event) {
+    private void btnHapusAction(ActionEvent event) throws ClassNotFoundException {
+       TiketViewModel item = tableTiket.getSelectionModel().getSelectedItem();
+       String selected = item.getNoKtp();
+       // Membuat dialog box konfirmasi
+        Alert alertBatal = new Alert(Alert.AlertType.CONFIRMATION);
+        alertBatal.setTitle("Kampus App - Konfirmasi Hapus Data");
+        alertBatal.setHeaderText("Hapus Data??");
+        alertBatal.setContentText("Apakah anda yakin akan hapus data ini???");
+        Optional<ButtonType> konfirmasiHapus = alertBatal.showAndWait();
+        if(konfirmasiHapus.get() == ButtonType.OK){
+            try {
+                TiketDAO.deleteTiket(selected);
+            } catch (SQLException e) {
+                System.out.println("Ada kesalahan "+ e);
+            }
+        }
+        DashboardController.getInstance().loadData();
     }
 
     @FXML

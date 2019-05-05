@@ -66,7 +66,8 @@ public class BeliTiketController implements Initializable {
     private DatePicker tanggalBerangkat;
     @FXML
     private JFXTimePicker jamBerangkat;
-   
+    
+    //Inisialisasi nilai awal
     public int kelas = 0;
     public int dewasa = 0;
     public int total = 0;
@@ -147,7 +148,7 @@ public class BeliTiketController implements Initializable {
             
             TiketDAO.insertTiket(fieldKtp.getText(), fieldNamaPenumpang.getText(), 
                     comboAsal.getValue(), comboTujuan.getValue(), comboKodeKereta.getValue(), fieldNamaKereta.getText(),
-                    spinTiket.getValue(), bayar, tanggalBerangkat.getValue(), jamBerangkat.getValue());
+                    toggleKelasTiket.getSelectedToggle().toString(),spinTiket.getValue(), bayar, tanggalBerangkat.getValue(), jamBerangkat.getValue());
             // Menampilkan dialog box informasi
                 Alert alertSimpan = new Alert(Alert.AlertType.INFORMATION);
                 alertSimpan.setTitle("Kampus App - Informasi");
